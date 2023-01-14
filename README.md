@@ -4,7 +4,7 @@
 
 ##### Group members: Brandon Haupt, Rae Hebron, Ruhama Yared, Samantha Whitford
 
-####[Trello Board Link](https://trello.com/b/xyWSrbiC/bookmarkd-lab)
+[Trello Board Link](https://trello.com/b/xyWSrbiC/bookmarkd-lab)
 
 ### Technologies Used
 
@@ -28,7 +28,7 @@
 | 1/20 | Meet to test app and make final changes. Check/test deployed site and submit. Meet to discuss presentation. |
 <!-- prettier-ignore-end -->
 
-### Link to Project
+### Links to Project
 
-[Backend Deployed Project Page](https://bookmarkd-backend-hhwq.onrender.com)
+[Backend Deployed Project Page](https://bookmarkd-backend-hhwq.onrender.com)  
 [Frontend Deployed Project Page](https://bookmarkd-frontend.onrender.com)

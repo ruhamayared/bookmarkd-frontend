@@ -4,7 +4,14 @@ export default function Header(){
     return(
         <>
             <nav className="nav">
-                <Link to="/"><div>Header</div></Link>
+                <div className="logo">
+                    <p className="logo">Logo</p>
+                </div>
+                <div className="links">
+                    <Link to="/" >
+                        <div>Header</div>
+                    </Link>
+                </div>
             </nav>
         </>
     )

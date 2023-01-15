@@ -28,6 +28,11 @@ $white: #fff;
     background-color: $black;
 }
 
+@mixin flex-directionRow {
+    display: flex;
+    flex-direction: row;
+}
+
 
 .nav {
     background-color: $black;
@@ -40,4 +45,24 @@ $white: #fff;
 .logo {
     color: $white;
     font-size: 1.5rem;
+}
+
+.container {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.bookmark {
+   @include flex-directionRow();
+   justify-content: space-between;
+}
+
+.icons {
+    @include flex-directionRow();
+    justify-content: center;
+    align-items: center;
+    img {
+        padding: 0 20px 0 0;
+        cursor: pointer;
+    }
 }

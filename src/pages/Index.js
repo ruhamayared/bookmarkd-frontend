@@ -1,4 +1,6 @@
 import { Form, useLoaderData } from "react-router-dom"
+import Pen from "../components/img/pen.png"
+import Trashcan from "../components/img/trashcan.png"
 
 function Index(props) {
   const bookmarks = useLoaderData()
@@ -19,7 +21,12 @@ function Index(props) {
             <a href={bookmark.url} target="_blank" rel="noreferrer">
               <h1>{bookmark.title}</h1>
             </a>
+            <div className="icons">
+              <img className="pen" src={Pen} alt="pen"/>
+              <img className="trashcan" src={Trashcan} alt="trashcan"/>
+            </div>
           </div>
+          
         ))}
       </div>
     </div>

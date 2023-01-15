@@ -7,26 +7,27 @@ function Index(props) {
 
   return (
     <div>
-      <h2>Add a Bookmark</h2>
-      <Form action="/create" method="post">
-        <input type="input" name="title" placeholder="Site title" />
-        <input type="input" name="url" placeholder="Site URL" />
-        <input type="submit" value="Add a Bookmark" />
-      </Form>
+      <div className="add">
+        <h2>Add a Bookmark:</h2>
+        <Form action="/create" method="post">
+          <input type="input" name="title" placeholder="Site title" />
+          <input type="input" name="url" placeholder="Site URL" />
+          <input type="submit" value="Add a Bookmark" />
+        </Form>
+      </div>
 
-      <h2>Bookmarks</h2>
       <div className="container">
+        <h1>Bookmarks</h1>
         {bookmarks.map((bookmark) => (
           <div className="bookmark">
             <a href={bookmark.url} target="_blank" rel="noreferrer">
-              <h1>{bookmark.title}</h1>
+              <h2>{bookmark.title}</h2>
             </a>
             <div className="icons">
-              <img className="pen" src={Pen} alt="pen"/>
-              <img className="trashcan" src={Trashcan} alt="trashcan"/>
+              <img className="pen" src={Pen} alt="pen" />
+              <img className="trashcan" src={Trashcan} alt="trashcan" />
             </div>
           </div>
-          
         ))}
       </div>
     </div>

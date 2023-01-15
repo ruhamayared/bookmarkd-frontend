@@ -13,6 +13,8 @@ img, picture, svg, video {
 }
 
 body {
+    background: url("https://i.imgur.com/K3dMCHf.jpg");
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     min-height: 100vh;
 }
 
@@ -22,6 +24,7 @@ body {
 /////////////////
 $black: #222;
 $white: #fff;
+$blue: rgb(26, 94, 134);
 
 @mixin black-bg-white-text {
     color: $white;
@@ -35,16 +38,27 @@ $white: #fff;
 
 
 .nav {
-    background-color: $black;
+    background-color: $blue;
     display: flex;
     padding: 1.5rem;
     align-items: center;
     justify-content: center;
 }
 
+.add {
+    display: flex;
+    padding: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+input{
+    margin-left: 10px;
+}
+
 .logo {
     color: $white;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
 }
 
 .container {

@@ -1,9 +1,17 @@
 import { Form, useLoaderData } from "react-router-dom"
-import Pen from "../components/img/pen.png"
-import Trashcan from "../components/img/trashcan.png"
+// import Pen from "../components/img/pen.png"
+// import Trashcan from "../components/img/trashcan.png"
 
 function Index(props) {
   const bookmarks = useLoaderData()
+
+  function edit(){
+    alert("Edit")
+  }
+
+  function deleted(){
+    alert("Deleted")
+  }
 
   return (
     <div>
@@ -24,8 +32,10 @@ function Index(props) {
               <h2>{bookmark.title}</h2>
             </a>
             <div className="icons">
-              <img className="pen" src={Pen} alt="pen" />
-              <img className="trashcan" src={Trashcan} alt="trashcan" />
+              <button className="bPen" onClick={edit}></button>
+              <button className="trashCan" onClick={deleted}></button>
+              {/* <img className="pen" src={Pen} alt="pen" onClick={edit} />
+              <img className="trashcan" src={Trashcan} onClick={deleted} alt="trashcan" /> */}
             </div>
           </div>
         ))}

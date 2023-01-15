@@ -35,19 +35,6 @@ $white: #fff;
     padding: 1.5rem;
     align-items: center;
     justify-content: center;
-    
-    a {
-        display: flex;
-        @include black-bg-white-text();
-        padding: 0 10px;
-        text-decoration: none;
-        font-size: 1.2rem;
-    }
-
-    a:hover {
-        border: 2px solid $white;
-        border-radius: 5px;
-    }
 }
 
 .logo {

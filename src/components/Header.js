@@ -3,7 +3,7 @@ export default function Header() {
     <>
       <nav className="nav">
         <div className="logo">
-          <p className="logo">The Bookmark App</p>
+          <p>The Bookmark App</p>
         </div>
       </nav>
     </>

@@ -1,17 +1,11 @@
 import { Form, useLoaderData } from "react-router-dom"
 // import Pen from "../components/img/pen.png"
 // import Trashcan from "../components/img/trashcan.png"
+// import {deleteAction} from "../router/actions"
 
 function Index(props) {
   const bookmarks = useLoaderData()
 
-  function edit(){
-    alert("Edit")
-  }
-
-  function deleted(){
-    alert("Deleted")
-  }
 
   return (
     <div>
@@ -27,15 +21,16 @@ function Index(props) {
       <div className="container">
         <h1>Bookmarks</h1>
         {bookmarks.map((bookmark) => (
-          <div className="bookmark">
+          <div className="bookmark" id="bookmark">
             <a href={bookmark.url} target="_blank" rel="noreferrer">
               <h2>{bookmark.title}</h2>
             </a>
             <div className="icons">
-              <button className="bPen" onClick={edit}></button>
-              <button className="trashCan" onClick={deleted}></button>
-              {/* <img className="pen" src={Pen} alt="pen" onClick={edit} />
-              <img className="trashcan" src={Trashcan} onClick={deleted} alt="trashcan" /> */}
+              <Form id="deleteForm" action={`/${bookmark._id}`} method="post">
+                <button className={"trashCan"}></button>
+              </Form>
+              <button className="bPen" id="pen"></button>
+
             </div>
           </div>
         ))}

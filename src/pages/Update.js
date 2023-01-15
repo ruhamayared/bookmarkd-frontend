@@ -4,8 +4,8 @@ function Update(props) {
   const bookmark = useLoaderData()
 
   return (
-    <div className="person">
-      <h2>Update {bookmark.title}</h2>
+    <div className="update">
+      <h2>Update {bookmark.title}:</h2>
       <Form action={`/update/${bookmark._id}`} method="post">
         <input defaultValue={bookmark.title} type="input" name="title" placeholder="Site title" />
         <input defaultValue={bookmark.url} type="input" name="url" placeholder="Site url" />

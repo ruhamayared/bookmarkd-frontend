@@ -1,4 +1,4 @@
-import { Form, useLoaderData } from "react-router-dom"
+import { Form, Link, useLoaderData } from "react-router-dom"
 import Pen from "../components/img/pen.png"
 import Trashcan from "../components/img/trashcan.png"
 
@@ -24,8 +24,14 @@ function Index(props) {
               <h2>{bookmark.title}</h2>
             </a>
             <div className="icons">
-              <img className="pen" src={Pen} alt="pen" />
-              <img className="trashcan" src={Trashcan} alt="trashcan" />
+              <Link to={`/${bookmark._id}`}>
+                <img className="pen" src={Pen} alt="pen" />
+              </Link>
+              <Form action={`/delete/${bookmark._id}`} method="post">
+                <button className={"trashCan"}>
+                  <img className="trashcan" src={Trashcan} alt="trashcan" />
+                </button>
+              </Form>
             </div>
           </div>
         ))}

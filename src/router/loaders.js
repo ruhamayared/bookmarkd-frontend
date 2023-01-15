@@ -5,3 +5,9 @@ export const indexLoader = async () => {
   const bookmarks = await response.json()
   return bookmarks
 }
+
+export const updateLoader = async ({ params }) => {
+  const response = await fetch(URL + "/bookmarks/" + params.id)
+  const bookmark = await response.json()
+  return bookmark
+}

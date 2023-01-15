@@ -2,14 +2,16 @@ import { createBrowserRouter, createRoutesFromElements, Route } from "react-rout
 import App from "../App"
 import Index from "../pages/Index"
 import Update from "../pages/Update"
-import { indexLoader } from "./loaders"
-import { updateAction } from "./actions"
+import { indexLoader, updateLoader } from "./loaders"
+import { updateAction, deleteAction } from "./actions"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route path="" element={<Index />} loader={indexLoader} />
-      <Route path=":id" element={<Update />} action={updateAction}/>
+      <Route path=":id" element={<Update />} loader={updateLoader} />
+      <Route path="update/:id" action={updateAction} />
+      <Route path="delete/:id" action={deleteAction} />
     </Route>
   )
 )

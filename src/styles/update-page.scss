@@ -1,0 +1,44 @@
+
+@mixin box-shadow {
+    box-shadow:
+        2px 2.8px 2.2px rgba(0, 0, 0, 0.048),
+        4.9px 6.7px 5.3px rgba(0, 0, 0, 0.069),
+        9.3px 12.5px 10px rgba(0, 0, 0, 0.085),
+        16.5px 22.3px 17.9px rgba(0, 0, 0, 0.101),
+        30.9px 41.8px 33.4px rgba(0, 0, 0, 0.122),
+        74px 100px 80px rgba(0, 0, 0, 0.17)
+    ;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.update-container {
+    display: grid;
+    align-items: center;
+    height: calc(100vh - 6rem);
+}
+
+.update {
+    @include flex-column;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 60%;
+    margin: 0 auto;
+    border-radius: 10px;
+    @include box-shadow;
+    
+    form {
+        @include flex-column;
+        width: 90%;
+    }
+
+    .update-input {
+        @include box-shadow;
+        border: 1px solid rgb(220, 220, 220);
+    }
+}

@@ -23,7 +23,7 @@
 
 .update {
     @include flex-column;
-    background-color: white;
+    background-color: rgba($color: #fff, $alpha: .3);
     justify-content: center;
     align-items: center;
     width: 40%;
@@ -39,6 +39,12 @@
 
     .update-input {
         @include box-shadow;
-        border: 1px solid rgb(220, 220, 220);
+        background-color: rgba($color: #fff, $alpha: .3);
+        border: 1px solid rgba($color: #fff, $alpha: .4);
+
+        &:hover {
+            background-color: rgba($color: #fff, $alpha: .4);
+            color: black;
+        }
     }
 }

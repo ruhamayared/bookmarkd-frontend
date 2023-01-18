@@ -5,7 +5,6 @@ import Trashcan from "../components/img/trashcan.png"
 function Index(props) {
   const bookmarks = useLoaderData()
 
-
   return (
     <div>
       <div className="add">
@@ -25,7 +24,6 @@ function Index(props) {
               <h2>{bookmark.title}</h2>
             </a>
             <div className="icons">
-
               <Link to={`/${bookmark._id}`}>
                 <img className="pen" src={Pen} alt="pen" />
               </Link>

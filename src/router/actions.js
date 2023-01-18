@@ -4,24 +4,23 @@ const URL = "https://bookmarkd-backend-hhwq.onrender.com"
 
 //Create Action
 export const createAction = async ({ request }) => {
-    const formData = await request.formData();
+  const formData = await request.formData()
 
-    const newBookmark = {
-        title: formData.get("title"),
-        url: formData.get("url"),
-        
-    };
-    
-    await fetch(URL + '/bookmarks', {
-        method: "post",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newBookmark),
-    });
+  const newBookmark = {
+    title: formData.get("title"),
+    url: formData.get("url"),
+  }
 
-    return redirect('/');
-};
+  await fetch(URL + "/bookmarks", {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(newBookmark),
+  })
+
+  return redirect("/")
+}
 
 // Update Action
 export const updateAction = async ({ request, params }) => {

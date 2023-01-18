@@ -1,0 +1,160 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+* {
+    padding: 0; 
+    margin: 0; 
+} 
+
+img, picture, svg, video {
+    display: block; 
+    max-width: 100%;
+}
+
+body {
+    background: url("https://i.imgur.com/tOnsj2F.png") no-repeat;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+/////////////////
+/// VARIABLES ///
+/////////////////
+$black: #222;
+$white: #fff;
+$blue: #214b83;
+$warning: #b00000;
+
+@mixin black-bg-white-text {
+    color: $white;
+    background-color: $black;
+}
+
+@mixin flex-directionRow {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin box-shadow {
+    box-shadow:
+        2.8px 2.8px 1.3px rgba(0, 0, 0, 0.02),
+        6.7px 6.7px 3.1px rgba(0, 0, 0, 0.028),
+        12.5px 12.5px 5.9px rgba(0, 0, 0, 0.035),
+        22.3px 22.3px 10.5px rgba(0, 0, 0, 0.042),
+        41.8px 41.8px 19.6px rgba(0, 0, 0, 0.05),
+        100px 100px 47px rgba(0, 0, 0, 0.07)
+    ;
+}
+
+
+.nav {
+    background-color: $blue;
+    display: flex;
+    padding: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.add {
+    display: flex;
+    padding: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.update {
+    display: flex;
+    padding: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+input{
+    margin-left: 10px;
+}
+
+.logo {
+    color: $white;
+    font-size: 2.5rem;
+}
+
+.container {
+    min-width: 300px;
+    max-width: 500px;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.bookmark {
+   @include flex-directionRow;
+   justify-content: space-between;
+}
+
+.icons {
+    @include flex-directionRow;
+    justify-content: center;
+    align-items: center;
+    img {
+        padding: 0 20px 0 0;
+        cursor: pointer;
+    }
+
+    button {
+        padding: 0 30px 0 0;
+        cursor: pointer;
+    }
+}
+
+form {
+    input {
+        padding: 8px;
+        margin: .5rem;
+        border: none;
+        border-radius: 100px;
+        @include box-shadow;
+    }
+
+    input[type=submit]{
+        cursor: pointer;
+    }
+
+
+    input[type=submit]:hover{
+        background-color: $black;
+        color: $white;
+    }
+}
+
+.trashCan {
+    background: url("../components/img/trashcan.png") no-repeat;
+    border: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 0 auto;
+    width: 16px;
+    height: 18px;
+
+    &:hover {
+        background: url("../components/img/Trashcan-red.png") no-repeat;
+    }
+}
+
+.pen {
+    background: url("../components/img/pen.png") no-repeat;
+    border: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 0 auto;
+    width: 18px;
+    height: 19px;
+    margin: 0 15px 0 0;
+
+    &:hover {
+        background: url("../components/img/pen-green.png") no-repeat;
+    } 
+}

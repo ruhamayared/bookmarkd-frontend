@@ -15,7 +15,7 @@ export const createAction = async ({ request }) => {
     await fetch(URL + '/bookmarks', {
         method: "post",
         headers: {
-            "Content-Type": "application.json",
+            "Content-Type": "application/json",
         },
         body: JSON.stringify(newBookmark),
     });
